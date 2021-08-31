@@ -4,8 +4,16 @@ html {
 
 body {
 	margin: 0;
-    height: 4000px;
+    height: 3500px;
     background-color: #6e7c83;
+}
+
+.container{
+	width: 100%;
+	max-width: 800px;
+	margin:  auto;
+	border:  solid gold 1px;
+	box-shadow: 0px 0px 4px 2px #232323;
 }
 
 .nav {
@@ -15,7 +23,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	background-color: black;
-	border-bottom: solid #e91e63 4px;
+	border-bottom: solid #e91e63 2px;
 }
 
 .link {
@@ -36,7 +44,7 @@ body {
 
 section {
 	margin: 20px;
-    scroll-margin: 48px; /*decalage of height navbar (40px + 2x 4px border)*/
+    scroll-margin: 50px; /*scroll margin cause height navBar*/
 	height: 500px;
 	border: solid teal;
     border-radius: 5px;
