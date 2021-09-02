@@ -21,7 +21,6 @@ body {
 	position: sticky;
 	top: 0;
 	display: flex;
-	justify-content: space-around;
 	background-color: black;
 	border-bottom: solid #e91e63 2px;
 }
@@ -31,15 +30,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-	font-size: 18px;
+	font-size: 1.5rem;
     text-decoration: none;
     color:white;
     transition: all 0.5s;
+	flex: 1;
+	border-top: solid 2px black;
+}
+
+.link:hover {
+	border-top: solid 2px #e91e63;
 }
 
 /* Style the active class, and buttons on mouse-over */
-.active,.link:hover {
+.active {
 	background-color: #e91e63;
+	border-top: solid 2px #e91e63;
 }
 
 section {
