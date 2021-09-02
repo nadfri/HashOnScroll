@@ -1,8 +1,9 @@
+//Global Variables
 const sections     = document.querySelectorAll('section');
 const links        = document.querySelectorAll('.link');
 const nav          = document.querySelector('.nav');
 const navPos       = nav.getBoundingClientRect(); //Position of navBar
-const scrollMargin = 8; //50px - 42px navBar height
+const scrollMargin = 10; //50px - 42px navBar height +1px security
 
 //Update hash when link is active
 function updateHash(hash) {
@@ -12,11 +13,13 @@ function updateHash(hash) {
 
 window.onscroll = () => {
 	sections.forEach((section, index) => {
-		const sectionPos = section.getBoundingClientRect(); //Pos of section
+		//Position of section
+		const sectionPos = section.getBoundingClientRect(); 
 
 		if (sectionPos.top <= navPos.bottom + scrollMargin && sectionPos.bottom >= 0) {
 			//remove active class from all links
 			links.forEach((link) => link.classList.remove('active'));
+			//add active class to current link
 			links[index].classList.add('active');
 			const hash = links[index].getAttribute('href');
 			updateHash(hash);
